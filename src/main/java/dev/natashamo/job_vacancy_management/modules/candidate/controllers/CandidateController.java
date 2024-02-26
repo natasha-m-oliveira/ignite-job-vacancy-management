@@ -12,7 +12,7 @@ import dev.natashamo.job_vacancy_management.modules.candidate.useCases.CreateCan
 import jakarta.validation.Valid;
 
 @RestController
-@RequestMapping("/candidate")
+@RequestMapping("/candidates")
 public class CandidateController {
   @Autowired
   private CreateCandidateUseCase createCandidateUseCase;
