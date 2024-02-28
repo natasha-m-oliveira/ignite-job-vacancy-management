@@ -1,4 +1,4 @@
-package dev.natashamo.job_vacancy_management.modules.company.entities;
+package dev.natashamo.job_vacancy_management.modules.companies.entities;
 
 import java.time.LocalDateTime;
 import java.util.UUID;

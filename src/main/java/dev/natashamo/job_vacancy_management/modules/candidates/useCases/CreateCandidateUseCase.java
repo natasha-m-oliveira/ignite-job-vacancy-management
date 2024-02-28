@@ -1,11 +1,11 @@
-package dev.natashamo.job_vacancy_management.modules.candidate.useCases;
+package dev.natashamo.job_vacancy_management.modules.candidates.useCases;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import dev.natashamo.job_vacancy_management.exceptions.UserAlreadyExistsExeption;
-import dev.natashamo.job_vacancy_management.modules.candidate.CandidateEntity;
-import dev.natashamo.job_vacancy_management.modules.candidate.CandidateRepository;
+import dev.natashamo.job_vacancy_management.modules.candidates.CandidateEntity;
+import dev.natashamo.job_vacancy_management.modules.candidates.CandidateRepository;
 
 @Service
 public class CreateCandidateUseCase {

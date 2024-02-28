@@ -1,12 +1,12 @@
-package dev.natashamo.job_vacancy_management.modules.company.controllers;
+package dev.natashamo.job_vacancy_management.modules.companies.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import dev.natashamo.job_vacancy_management.modules.company.entities.CompanyEntity;
-import dev.natashamo.job_vacancy_management.modules.company.useCases.CreateCompanyUseCase;
+import dev.natashamo.job_vacancy_management.modules.companies.entities.CompanyEntity;
+import dev.natashamo.job_vacancy_management.modules.companies.useCases.CreateCompanyUseCase;
 import jakarta.validation.Valid;
 
 import org.springframework.web.bind.annotation.PostMapping;
@@ -18,12 +18,12 @@ public class CompanyController {
   @Autowired
   private CreateCompanyUseCase createCompanyUseCase;
 
-  @PostMapping("/")
+  @PostMapping()
   public ResponseEntity<Object> create(@Valid @RequestBody CompanyEntity companyEntity) {
     try {
       var company = this.createCompanyUseCase.execute(companyEntity);
 
-      return ResponseEntity.ok().body(company);
+      return ResponseEntity.status(201).body(company);
     } catch (Exception e) {
       return ResponseEntity.badRequest().body(e.getMessage());
     }

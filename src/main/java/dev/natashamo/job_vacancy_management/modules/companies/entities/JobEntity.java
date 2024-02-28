@@ -1,4 +1,4 @@
-package dev.natashamo.job_vacancy_management.modules.company.entities;
+package dev.natashamo.job_vacancy_management.modules.companies.entities;
 
 import java.time.LocalDateTime;
 import java.util.UUID;
@@ -13,6 +13,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import lombok.Data;
 
 @Entity(name = "jobs")
@@ -32,6 +33,7 @@ public class JobEntity {
   private CompanyEntity companyEntity;
 
   @Column(name = "company_id", nullable = false)
+  @NotNull
   private UUID companyId;
 
   @CreationTimestamp

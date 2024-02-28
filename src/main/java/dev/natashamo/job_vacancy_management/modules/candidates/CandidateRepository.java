@@ -1,4 +1,4 @@
-package dev.natashamo.job_vacancy_management.modules.candidate;
+package dev.natashamo.job_vacancy_management.modules.candidates;
 
 import java.util.Optional;
 import java.util.UUID;
